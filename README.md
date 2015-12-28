@@ -9,5 +9,7 @@ Feel free to use, modify or whatever you want.
 
 The complete step by step tutorials is available at http://techfunda.com/howto/angularjs/single-page-application
 
+The basics of Single Page Application and the video of this project is available at http://www.dotnetfunda.com/articles/show/3202/single-page-application-example-download 
+
 Thanks
 Sheo Narayan
