@@ -45,6 +45,10 @@ app.config(function ($routeProvider) {
         templateUrl: '/SPA/PD/delete.html',
         controller: "PDControllerDelete"
     })
+    .otherwise({
+        templateUrl: '/SPA/redirectError.html',
+        controller: "PDControllerError"
+    });
 });
 
 
@@ -237,15 +241,23 @@ app.controller("SPAController", function ($scope, $rootScope) {
     $scope.Title = "Single Page Application";
     $rootScope.loading = false;
 });
+
 // Home controller
 app.controller("HomeController", function ($scope) {
     $scope.Title = "Single Page Application (SPA)";
 });
+
 // About controller
 app.controller("AboutController", function ($scope) {
     $scope.Title = "About us";
 });
+
 // Contact controller
 app.controller("ContactController", function ($scope) {
     $scope.Title = "Contact us";
+});
+
+// Contact controller
+app.controller("PDControllerError", function ($scope) {
+    $scope.Title = "Redirect Error";
 });
