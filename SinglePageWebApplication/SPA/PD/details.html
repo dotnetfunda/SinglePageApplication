@@ -1,0 +1,18 @@
+﻿<h1>{{Title}}</h1>
+<dl>
+    <dd>First name:</dd>
+    <dt>{{Person.FirstName}}</dt>
+
+    <dd>Last name:</dd>
+    <dt>{{Person.LastName}}</dt>
+
+    <dd>Age:</dd>
+    <dt>{{Person.Age}}</dt>
+
+    <dd>Active:</dd>
+    <dt>{{Person.Active}}</dt>
+</dl>
+
+<hr />
+<a href="#/PD/Edit/{{Person.AutoId}}">Edit</a> | <a href="#/PD">Back to List</a> | <a href="#/PD/Create" title="Create new record">Create new</a> | 
+<a class="btn btn-danger" href="javascript:void(0)" ng-click="Delete()">Delete</a> <span class="text-danger">{{DeleteMessage}}</span>

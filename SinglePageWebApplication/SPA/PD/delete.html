@@ -1,0 +1,11 @@
+﻿<h1>{{Title}}</h1>
+<a href="#/PD/Create" title="Create new record">Create new</a> | <a href="javascript:void(0)" ng-click="GetPersonalDetails()">Get Data</a>
+<table class="table table-striped table-responsive">
+    <tr>
+        <th>First Name</th><th>Last Name</th><th>Age</th><th>Active</th><th></th>
+    </tr>
+    <tr ng-repeat="d in PersonalDetails">
+        <td>{{d.FirstName}}</td><td>{{d.LastName}}</td><td>{{d.Age}}</td><td>{{d.Active}}</td>
+        <th><a href="#/PD/Edit/{{d.AutoId}}">Edit</a> | <a href="#/PD/Delete/{{d.AutoId}}">Delete</a> | <a href="#/PD/Details/{{d.AutoId}}">Details</a></th>
+    </tr>
+</table>

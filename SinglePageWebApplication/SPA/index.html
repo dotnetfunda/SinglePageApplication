@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Single Page Application example - TechFunda</title>
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/Site.css" rel="stylesheet" />
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/SPA/PersonalDetailsController.js"></script>
+
+    <style>
+        #divLoading {  
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            z-index:1000;
+            background-color:#ddffdc;
+            opacity: .8;
+            content: 'Loading...';
+         }
+
+        .loading {
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            margin-left: -32px;
+            margin-top: -32px; 
+            display: block;    
+            color:black;
+        }
+    </style>
+
+</head>
+<body ng-app="app" ng-controller="SPAController">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" title="SPA - TechFunda" class="navbar-brand">SPA - TechFunda</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/">Home</a></li>
+                    <li><a href="#/PD">Personal Details</a></li>
+                    <li><a href="#/about">About us</a></li>
+                    <li><a href="#/contact">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <h1>{{Title}}</h1>
+        <div id="divLoading" ng-show="loading" style="font-size:50px;">
+            <div class="loading" >
+                Loading .....
+            </div>
+        </div>
+        <div ng-view></div>
+        <hr />
+        <footer>
+            License: FREE to use by anyone in any form
+            <p>&copy; Developed by Sheo Narayan from <a href="http://www.dotnetfunda.com" target="_blank">http://www.dotnetfunda.com</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
